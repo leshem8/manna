@@ -62,13 +62,13 @@ export default function MeditationSpace() {
   return (
     <div className="glass-panel animate-fade-in" style={{ animationDelay: '0.4s', opacity: 0, animationFillMode: 'forwards' }}>
       <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <span>Reflection & Prayer</span>
-        {isSaved && <span style={{ fontSize: '0.875rem', color: 'var(--accent-color)', fontWeight: 500, animation: 'fadeIn 0.3s ease' }}>Saved to Google Docs \u2713</span>}
+        <span>묵상 및 기도</span>
+        {isSaved && <span style={{ fontSize: '0.875rem', color: 'var(--accent-color)', fontWeight: 500, animation: 'fadeIn 0.3s ease' }}>구글 문서에 저장됨 \u2713</span>}
       </h3>
       
       <textarea 
         className="glass-input"
-        placeholder="Quiet your soul and reflect on today's verse..."
+        placeholder="마음을 잠잠히 하고 기도로 나아가세요..."
         value={note}
         onChange={handleChange}
         disabled={isSaving}
@@ -91,7 +91,7 @@ export default function MeditationSpace() {
             cursor: (!note.trim() || isSaving) ? 'not-allowed' : 'pointer' 
           }}
         >
-          {isSaving ? 'Saving...' : (isSaved ? 'Saved \u2713' : 'Save Note')}
+          {isSaving ? '저장 중...' : (isSaved ? '저장 완료 \u2713' : '노트 저장')}
         </button>
       </div>
     </div>
